@@ -223,7 +223,7 @@
         display: flex;
         height: 100%;
         width: 40%;
-        border: 50px solid;
+        border: 6.63vh solid;
         border-image: radial-gradient(circle, rgb(255, 255, 255), rgba(255, 255, 255, 0) 80%) 49% stretch;
         background-color: rgba(0, 0, 0, 0);
         z-index: 1;
