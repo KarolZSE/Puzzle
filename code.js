@@ -29,14 +29,16 @@
 
     // The code to fullscreen the page
     var elem = document.documentElement;
-    async function openFullscreen(a) {
+    function openFullscreen(a) {
         if (elem.requestFullscreen) {
             elem.requestFullscreen();
         } else if (elem.webkitRequestFullscreen) { /* Safari */
             elem.webkitRequestFullscreen();
         }
         if (a == 1) {
-            await screen.orientation.lock("landscape");
+            setTimeout(function(){
+                screen.orientation.lock("landscape"); 
+            }, 2000);
         }
     }
     document.addEventListener('click', (event) => {
@@ -92,7 +94,7 @@
 
     // The code of the own image
         document.documentElement.style.setProperty('--grid-item-bg-image', 'url("image.jpg")'); // Default background image
-        gamesize = 50;
+        gamesize = 75;
         document.documentElement.style.setProperty('--grid-item-bg-size', `${gamesize}vh ${gamesize}vh`);
         document.documentElement.style.setProperty('--img-preview-size', `${gamesize}vh`);
         const ownImage = document.getElementById('ownImage');
