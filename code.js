@@ -38,7 +38,7 @@
         if (a == 1) {
             setTimeout(function(){
                 screen.orientation.lock("landscape"); 
-            }, 250);
+            }, 500);
         }
     }
     document.addEventListener('click', (event) => {
