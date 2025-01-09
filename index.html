@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Completed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link type="image/png" sizes="24x24" rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-container" id="background-container"></div>
+    <div id="parental-menu">
+        <div id="menu">
+            <div id="menu-content">
+                <h1>Hi<input type="text" id="name" placeholder="Type in your Username">! How are you?</input></h1>
+                <p> Welcome to the Puzzle Game! 🧩
+                    In this game, your goal is to assemble a puzzle by arranging the pieces to form an image. 
+                    To play, drag the puzzle pieces into their correct positions. You can choose the number of 
+                    pieces you'd like to play with by selecting an option below. Once you've decided, click the 
+                    big button to start the timer. When you finish the puzzle, your score will be displayed on 
+                    the leaderboard! 🏆 The score is calculated based on the time you take and the number of 
+                    puzzle pieces you selected. You can also customize your game by changing the puzzle image. 
+                    At the bottom of the screen, there's a text prompt where you can paste a link to an image. 
+                    Once you've done that, you're all set! Enjoy the challenge and have fun! 🎉 Also if you don't 
+                    see the button to start the game just scroll down. 😊</p>
+                <div id="menu-content-bottom">
+                    <h2 id="slider-container-text">Number of pieces selected: 4</h2>
+                    <div class="slider-container">
+                        <div class="slider-track" id="sliderTrack">
+                            <div class="slider-thumb" id="sliderThumb"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <h2 id="OwnImage-text">Own image: No</h2>
+                    <input type="text" id="ownImage" placeholder="Paste in a link to your own image"></input>
+                    <br><hr><br>
+                    <button id="menu-button">Save Button</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="game-grid">
+        <div></div>
+        <div id="game-content">
+            <div class="grid" id="grid-container"></div>
+            <img id="img-preview" src="image.jpg" alt="Link to the image you choosen is't working"></img>
+        </div>
+        <div></div>
+    </div>
+    <div id="parental-leaderboard">
+        <div id="leaderboard">
+            <div id="leaderboard-content">
+                <h2>Leaderboard</h2>
+                <p><span>Username</span><span>Score</span><span>Puzzles</span><p>
+                <ol id="leaderboard-list"></ol>
+            </div>
+        </div>
+    </div>
+    <div id="parental-ending">
+        <div id="ending">
+            <div id="ending-content">
+                <h1>Well done!</h1>
+                <p>Your time was: <span id="timespan"></span></p>
+                <p>Your score was: <span id="scorespan"></span></p>
+                <p>Your puzzles was: <span id="puzzlesspan"></span></p>
+                <button id="ending-button">Play again</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="firebase.js" type="module"></script>
+<script src="code.js"></script>
+</html>

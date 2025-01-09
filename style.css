@@ -1,0 +1,249 @@
+    body {
+      overflow: hidden;
+      font-family: "Silkscreen", serif;
+      font-weight: 400;
+      font-style: normal;
+      background-color: aquamarine;
+      font-size: 1vw;
+    }
+
+    #game-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .grid {
+        display: grid;
+    }
+
+    .grid-item {
+        border: 0.5px solid #ccc;
+        background-image: var(--grid-item-bg-image);
+        background-size: var(--grid-item-bg-size); /* Assuming the image is 500x500 pixels */
+    }
+
+    #img-preview {
+        width: var(--img-preview-size);
+        height: var(--img-preview-size);
+        margin-left: 20px;
+    }
+
+    .background-container {
+        display: grid;
+        position: absolute;
+        margin: -8px;
+        grid-template-columns: repeat(auto-fill, 19px); /* Adjust columns to fill the viewport */
+        grid-template-rows: repeat(auto-fill, 19px); /* Adjust rows to fill the viewport */
+        width: 103vw; /* Full width of the viewport */
+        height: 100vh; /* Full height of the viewport */
+        z-index: -2;
+    }
+    
+    .background-item {
+        width: 19px;
+        height: 19px;
+    }
+
+    #parental-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    #menu {
+        display: flex;
+        height: 100%;
+        width: 40%;
+        border: 6.63vh solid;
+        border-image: radial-gradient(circle, rgb(255, 255, 255), rgba(255, 255, 255, 0) 80%) 49% stretch;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 1;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    #menu-content {
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+        width: 100%;
+    }
+
+    #menu-content > p {
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 0;
+
+    }
+
+    #menu-content > h1 {
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+        margin-right: auto;
+    }
+
+    #name {
+        margin-left: 8px;
+        margin-top: 2px;
+        font-family: "Silkscreen", serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+	height: 3.125vh;
+	font-size: 0.67vw;
+    }
+
+    #menu-content-bottom {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #menu-content-bottom > hr {
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    #ownImage {
+        font-family: "Silkscreen", serif;
+        font-weight: 400;
+        font-style: normal;
+        width: 80%;
+        text-align: center;
+	font-size: 0.67vw;
+    }
+
+    #menu-button {
+        font-family: "Silkscreen", serif;
+        font-weight: 400;
+        font-style: normal;
+	font-size: 0.67vw;
+    }
+
+    .slider-container {
+        width: 80%;
+    }
+
+    .slider-track {
+        width: 100%;
+        height: 0.21vh;
+        background: #ddd;
+        position: relative;
+    }
+    
+    .slider-thumb {
+        width: 4.17vh;
+        height: 4.17vh;
+        background: #000000;
+        position: absolute;
+        top: -0.84vw;
+        cursor: pointer;
+        margin-left: -4%;
+    }
+
+    #parental-leaderboard {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-top: -97.92vh;
+        height: 95.84vh;
+    }
+
+    #leaderboard {
+        width: 20%;
+        height: 100%;
+        border: 2.604vh solid;
+        border-image: radial-gradient(circle, rgb(255, 255, 255), rgba(255, 255, 255, 0) 80%) 49% stretch;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #leaderboard-content {
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        overflow-y: scroll;
+    }
+
+    #game-grid {
+        display: none;
+        grid-template-columns: 12.5% 75% 12.5%;
+    }
+
+    #leaderboard-content > p {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    ol {
+        padding: 0;
+        margin: 10px;
+    }
+
+    li {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        justify-content: space-between; /* Distribute only spans */
+        list-style: none; /* Remove default marker */
+        counter-increment: list-counter; /* Increment custom counter */
+    }
+
+    ol {
+        counter-reset: list-counter; /* Initialize custom counter */
+    }
+
+    li > span:first-child::before {
+        content: counter(list-counter) "."; /* Add the number directly before the first span */
+        color: black; /* Number color */
+        margin-right: 0; /* No space between number and text */
+    }
+
+    #parental-ending {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        margin-top: -100vh;
+    }
+
+    #ending {
+        display: flex;
+        height: 100%;
+        width: 40%;
+        border: 50px solid;
+        border-image: radial-gradient(circle, rgb(255, 255, 255), rgba(255, 255, 255, 0) 80%) 49% stretch;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 1;
+    }
+
+    #ending-content {
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #ending-button {
+        font-family: "Silkscreen", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    #slider-container-text {
+        font-family: "Silkscreen", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
