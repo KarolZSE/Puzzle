@@ -112,7 +112,7 @@ if (shouldSwitch) {
 }
 
     } else {
-        alert('The database has crashed, You will not be able to save your score');
+        console.log("You are sign out, want be able to save your data");
     }
 })};
 window.DatabaseCall = DatabaseCall;
